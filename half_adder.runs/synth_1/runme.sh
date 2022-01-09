@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log half_adder.vds -m64 -mode batch -messageDb vivado.pb -notrace -source half_adder.tcl
+EAStep vivado -log design_ps_pl_wrapper.vds -m64 -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_wrapper.tcl
