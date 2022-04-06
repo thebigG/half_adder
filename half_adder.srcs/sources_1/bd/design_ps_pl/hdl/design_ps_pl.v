@@ -1,15 +1,15 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-//Date        : Sat Jan  8 20:12:01 2022
-//Host        : pop-os running 64-bit Pop!_OS 21.04
+//Date        : Tue Apr  5 22:01:08 2022
+//Host        : pop-os running 64-bit Pop!_OS 21.10
 //Command     : generate_target design_ps_pl.bd
 //Design      : design_ps_pl
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_ps_pl,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ps_pl,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_ps_pl.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_ps_pl,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ps_pl,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=3,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_ps_pl.hwdef" *) 
 module design_ps_pl
    (DDR_addr,
     DDR_ba,
@@ -35,7 +35,9 @@ module design_ps_pl
     a,
     b,
     carry,
-    sum);
+    reset_rtl,
+    sum,
+    sys_clock);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -60,7 +62,9 @@ module design_ps_pl
   input a;
   input b;
   output [0:0]carry;
+  input reset_rtl;
   output [0:0]sum;
+  input sys_clock;
 
   wire a_1;
   wire [0:0]axi_gpio_1_gpio2_io_o;
@@ -172,7 +176,7 @@ module design_ps_pl
   assign sum[0] = axi_gpio_1_gpio_io_o;
   design_ps_pl_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(half_adder_0_carry),
-        .gpio_io_i(half_adder_0_sum),
+        .gpio_io_i({half_adder_0_sum,half_adder_0_sum,half_adder_0_sum,half_adder_0_sum,half_adder_0_sum,half_adder_0_sum,half_adder_0_sum,half_adder_0_sum}),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),

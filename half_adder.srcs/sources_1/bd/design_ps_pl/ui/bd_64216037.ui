@@ -1,44 +1,37 @@
 {
    guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 50 -defaultsOSRD
-preplace port reset_rtl -pg 1 -y 430 -defaultsOSRD
-preplace port sys_clock -pg 1 -y 450 -defaultsOSRD
-preplace port a -pg 1 -y 490 -defaultsOSRD
-preplace port b -pg 1 -y 510 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 70 -defaultsOSRD
-preplace portBus carry -pg 1 -y 350 -defaultsOSRD
-preplace portBus sum -pg 1 -y 310 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 360 -defaultsOSRD
-preplace inst led_fsm_0 -pg 1 -lvl 3 -y -140 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 160 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 3 -y 320 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 450 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 230 -defaultsOSRD
-preplace inst half_adder_0 -pg 1 -lvl 1 -y 520 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 130 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 50 NJ 50 NJ
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 780
-preplace netloc b_1 1 0 1 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 260 430
-preplace netloc sys_clock_1 1 0 2 NJ 460 NJ
-preplace netloc axi_gpio_1_gpio_io_o 1 3 1 NJ
-preplace netloc half_adder_0_carry 1 1 3 N 530 NJ 530 1090
-preplace netloc half_adder_0_sum 1 1 3 N 510 NJ 510 1100
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 2 460 370 800
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 70 NJ 70 NJ
-preplace netloc axi_gpio_1_gpio2_io_o 1 3 1 NJ
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 1 450
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 0 440 90 790
-preplace netloc a_1 1 0 1 NJ
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 780
-preplace netloc reset_rtl_1 1 0 2 NJ 450 NJ
-levelinfo -pg 1 0 230 630 950 1120 -top -210 -bot 580
+preplace port DDR -pg 1 -y 630 -defaultsOSRD
+preplace port reset_rtl -pg 1 -y 540 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 560 -defaultsOSRD
+preplace port usb_uart -pg 1 -y 550 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 650 -defaultsOSRD
+preplace inst rst_mig_7series_0_100M -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 3 -y 360 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -y 560 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 550 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 710 -defaultsOSRD
+preplace netloc axi_mem_intercon_M01_AXI 1 2 1 780
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 630 NJ 630 NJ
+preplace netloc mig_7series_0_mmcm_locked 1 0 4 40 180 NJ 160 NJ 160 1110
+preplace netloc clk_wiz_0_locked 1 2 1 790
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 490
+preplace netloc axi_mem_intercon_M00_AXI 1 2 1 780
+preplace netloc sys_clock_1 1 0 2 NJ 560 NJ
+preplace netloc mig_7series_0_ui_clk 1 0 4 20 270 480 610 NJ 490 1100
+preplace netloc rst_mig_7series_0_100M_interconnect_aresetn 1 1 1 470
+preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 1 2 440 620 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 650 NJ 650 NJ
+preplace netloc clk_wiz_0_clk_out1 1 2 1 770
+preplace netloc axi_uartlite_0_UART 1 3 1 NJ
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 0 4 30 190 NJ 170 NJ 170 1100
+preplace netloc reset_rtl_1 1 0 2 NJ 540 NJ
+levelinfo -pg 1 0 240 630 970 1140 -top 0 -bot 840
 ",
 }
 {
-   da_axi4_cnt: "2",
-   da_board_cnt: "2",
-   da_ps7_cnt: "1",
+   da_axi4_cnt: "4",
+   da_board_cnt: "4",
+   da_ps7_cnt: "2",
 }

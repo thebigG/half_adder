@@ -1,5 +1,6 @@
 set_property SRC_FILE_INFO {cfile:/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_processing_system7_0_0/design_ps_pl_processing_system7_0_0.xdc rfile:../../../half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_processing_system7_0_0/design_ps_pl_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:design_ps_pl_i/processing_system7_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/lorenzogomez/half_adder/half_adder.srcs/constrs_1/imports/digilent-xdc/Zedboard-Master.xdc rfile:../../../half_adder.srcs/constrs_1/imports/digilent-xdc/Zedboard-Master.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc rfile:../../../half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc id:2 order:EARLY used_in_board:yes scoped_inst:design_ps_pl_i/axi_gpio_0/U0 prop_thru_buffer:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/lorenzogomez/half_adder/half_adder.srcs/constrs_1/imports/digilent-xdc/Zedboard-Master.xdc rfile:../../../half_adder.srcs/constrs_1/imports/digilent-xdc/Zedboard-Master.xdc id:3} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3
 set_property src_info {type:SCOPED_XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
@@ -262,15 +263,31 @@ set_property src_info {type:SCOPED_XDC file:1 line:650 export:INPUT save:INPUT r
 set_property PACKAGE_PIN "C9" [get_ports "PS_SRSTB"]
 set_property src_info {type:SCOPED_XDC file:1 line:654 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "F7" [get_ports "PS_CLK"]
-set_property src_info {type:XDC file:2 line:175 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:SCOPED_XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_0} [get_ports gpio_io_i[0]]
+set_property src_info {type:SCOPED_XDC file:2 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_1} [get_ports gpio_io_i[1]]
+set_property src_info {type:SCOPED_XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_2} [get_ports gpio_io_i[2]]
+set_property src_info {type:SCOPED_XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_3} [get_ports gpio_io_i[3]]
+set_property src_info {type:SCOPED_XDC file:2 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_4} [get_ports gpio_io_i[4]]
+set_property src_info {type:SCOPED_XDC file:2 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_5} [get_ports gpio_io_i[5]]
+set_property src_info {type:SCOPED_XDC file:2 line:15 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_6} [get_ports gpio_io_i[6]]
+set_property src_info {type:SCOPED_XDC file:2 line:17 export:INPUT save:INPUT read:READ} [current_design]
+set_property BOARD_PIN {sws_8bits_tri_i_7} [get_ports gpio_io_i[7]]
+set_property src_info {type:XDC file:3 line:175 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T22 [get_ports sum];  # "LD0"
-set_property src_info {type:XDC file:2 line:176 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:176 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T21 [get_ports carry];  # "LD1"
-set_property src_info {type:XDC file:2 line:237 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:237 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F22 [get_ports a];  # "SW0"
-set_property src_info {type:XDC file:2 line:238 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:238 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G22 [get_ports b];  # "SW1"
-set_property src_info {type:XDC file:2 line:362 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:362 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 33]];
-set_property src_info {type:XDC file:2 line:372 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:372 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Apr  4 21:09:10 2022">
+<application name="pa" timeStamp="Tue Apr  5 23:10:17 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="eed42ed9c1bb4ed58efe6f5036aea7bc" type="ProjectID"/>
-<property name="ProjectIteration" value="14" type="ProjectIteration"/>
+<property name="ProjectIteration" value="15" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -17,29 +17,36 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="5" type="JavaHandler"/>
+<property name="AddModuleToBlockDesign" value="1" type="JavaHandler"/>
+<property name="AddSources" value="7" type="JavaHandler"/>
+<property name="AutoConnectBoardComp" value="3" type="JavaHandler"/>
 <property name="AutoConnectPort" value="7" type="JavaHandler"/>
 <property name="CreateBlockDesign" value="2" type="JavaHandler"/>
-<property name="CreateTopHDL" value="1" type="JavaHandler"/>
-<property name="CustomizeRSBBlock" value="21" type="JavaHandler"/>
-<property name="EditDelete" value="2" type="JavaHandler"/>
+<property name="CreateTopHDL" value="2" type="JavaHandler"/>
+<property name="CustomizeRSBBlock" value="41" type="JavaHandler"/>
+<property name="EditDelete" value="8" type="JavaHandler"/>
 <property name="EditProperties" value="4" type="JavaHandler"/>
-<property name="EditUndo" value="8" type="JavaHandler"/>
-<property name="ExportBitFile" value="6" type="JavaHandler"/>
+<property name="EditRedo" value="1" type="JavaHandler"/>
+<property name="EditUndo" value="10" type="JavaHandler"/>
+<property name="ExportBitFile" value="8" type="JavaHandler"/>
 <property name="ExportConstraints" value="1" type="JavaHandler"/>
 <property name="ExportSimulationFile" value="1" type="JavaHandler"/>
 <property name="FileExit" value="1" type="JavaHandler"/>
+<property name="MakeRSBConnection" value="1" type="JavaHandler"/>
+<property name="MoveToDesignSet" value="1" type="JavaHandler"/>
+<property name="MoveToSimSet" value="1" type="JavaHandler"/>
 <property name="NewExportHardware" value="3" type="JavaHandler"/>
 <property name="NewLaunchHardware" value="2" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="6" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="7" type="JavaHandler"/>
+<property name="OpenExample" value="1" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="2" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="1" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="2" type="JavaHandler"/>
 <property name="RecustomizeCore" value="10" type="JavaHandler"/>
-<property name="RegenerateRSBLayout" value="4" type="JavaHandler"/>
+<property name="RegenerateRSBLayout" value="6" type="JavaHandler"/>
 <property name="RunBitgen" value="8" type="JavaHandler"/>
-<property name="RunImplementation" value="6" type="JavaHandler"/>
-<property name="RunSynthesis" value="2" type="JavaHandler"/>
-<property name="SaveRSBDesign" value="4" type="JavaHandler"/>
+<property name="RunImplementation" value="7" type="JavaHandler"/>
+<property name="RunSynthesis" value="4" type="JavaHandler"/>
+<property name="SaveRSBDesign" value="8" type="JavaHandler"/>
 <property name="ShowView" value="3" type="JavaHandler"/>
 <property name="SimulationClose" value="1" type="JavaHandler"/>
 <property name="SimulationRestart" value="2" type="JavaHandler"/>
@@ -53,6 +60,66 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewTaskRTLAnalysis" value="2" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="1" type="JavaHandler"/>
 <property name="WaveformSaveConfiguration" value="2" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="Baud Rate (C_BAUDRATE" value="1" type="GuiResourceData"/>
+<property name="Bitstream, Bitstream" value="1" type="GuiResourceData"/>
+<property name="CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="CLKOUT1 REQUESTED OUT FREQ, 200.000" value="1" type="GuiResourceData"/>
+<property name="Clock Configuration, Clock Configuration" value="3" type="GuiResourceData"/>
+<property name="DDR Configuration, DDR Configuration" value="2" type="GuiResourceData"/>
+<property name="FINISH, Finish" value="1" type="GuiResourceData"/>
+<property name="IP, IP" value="1" type="GuiResourceData"/>
+<property name="Interrupts, Interrupts" value="2" type="GuiResourceData"/>
+<property name="MIO Configuration, MIO Configuration" value="3" type="GuiResourceData"/>
+<property name="NEXT, Next " value="1" type="GuiResourceData"/>
+<property name="Number of Slave Interfaces (NUM_SI" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddressTreeTablePanel_ADDRESS_TREE_TABLE, Data (32 address bits : 0x40000000 [ 1G ]" value="3" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddressTreeTablePanel_ADDRESS_TREE_TABLE, axi_uartlite_0 ; S_AXI ; Reg ; 0x42C0_0000 ; 64K ; 0x42C0_FFFF, 3, axi_uartlite_0, 0, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddressTreeTablePanel_ADDRESS_TREE_TABLE, axi_uartlite_0 ; S_AXI ; Reg ; 0x42C0_0000 ; 64K ; 0x42C0_FFFF, 3, axi_uartlite_0, 0, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddressTreeTablePanel_ADDRESS_TREE_TABLE, mig_7series_0 ; S_AXI ; memaddr ; 0x4000_0000 ; 128M ; 0x47FF_FFFF, 2, mig_7series_0, 0, false" value="3" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddressTreeTablePanel_ADDRESS_TREE_TABLE, mig_7series_0 ; S_AXI ; memaddr ; 0x4000_0000 ; 128M ; 0x47FF_FFFF, 2, mig_7series_0, 0, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddressTreeTablePanel_ADDRESS_TREE_TABLE, processing_system7_0 ;  ;  ;  ;  ; , 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, [All Automation (1 out of 2 selected" value="4" type="GuiResourceData"/>
+<property name="PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, [All Automation (2 out of 2 selected" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, [Zedboard, Clock Sources, System clock], 2, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.BoardTreePanel_BOARD_TREE_PANEL, [Zedboard, UART, USB UART], 15, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="4" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Memory Interface Generator (MIG 7 Series" value="4" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, MicroBlaze, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, MicroBlaze, 0, MicroBlaze, 0, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, MicroBlaze, 0, MicroBlaze, 0, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, ZYNQ7 Processing System, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, ZYNQ7 Processing System, 0, ZYNQ7 Processing System, 0, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, ZYNQ7 Processing System, 0, ZYNQ7 Processing System, 0, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_ADD_SOURCES, Sources_add_sources" value="2" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_CREATE_TOP_HDL, Create HDL Wrapper..." value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_IP_SETTINGS, IP Settings..." value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_MAKE_CONNECTION, Make Connection..." value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_EXAMPLE, Open IP Example Design..." value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, System_regenerate_rsb_layout" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, design_ps_pl_wrapper (design_ps_pl_wrapper.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, led_fsm - rtl (led_fsm.vhd" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources], 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, Run Block Automation" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, Run Connection Automation" value="6" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight" value="12" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SystemBuilderMenu_ADD_IP, Add IP..." value="3" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, IP Documentation" value="6" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SystemBuilderView_ORIENTATION, Orientation" value="6" type="GuiResourceData"/>
+<property name="PS-PL Configuration, PS-PL Configuration" value="2" type="GuiResourceData"/>
+<property name="Peripheral I/O Pins, Peripheral I/O Pins" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="18" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="25" type="GuiResourceData"/>
+<property name="SMC Timing Calculation, SMC Timing Calculation" value="2" type="GuiResourceData"/>
+<property name="pa.OptGroup_xilinx.com_bd_rule_axi4_Clk, Auto, 0" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="73" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="67" type="TclMode"/>
 </item>
 </section>
 </application>

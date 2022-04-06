@@ -1,8 +1,8 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-//Date        : Sat Jan  8 20:12:01 2022
-//Host        : pop-os running 64-bit Pop!_OS 21.04
+//Date        : Tue Apr  5 22:01:08 2022
+//Host        : pop-os running 64-bit Pop!_OS 21.10
 //Command     : generate_target design_ps_pl_wrapper.bd
 //Design      : design_ps_pl_wrapper
 //Purpose     : IP block netlist
@@ -34,7 +34,9 @@ module design_ps_pl_wrapper
     a,
     b,
     carry,
-    sum);
+    reset_rtl,
+    sum,
+    sys_clock);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -59,7 +61,9 @@ module design_ps_pl_wrapper
   input a;
   input b;
   output [0:0]carry;
+  input reset_rtl;
   output [0:0]sum;
+  input sys_clock;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -85,7 +89,9 @@ module design_ps_pl_wrapper
   wire a;
   wire b;
   wire [0:0]carry;
+  wire reset_rtl;
   wire [0:0]sum;
+  wire sys_clock;
 
   design_ps_pl design_ps_pl_i
        (.DDR_addr(DDR_addr),
@@ -112,5 +118,7 @@ module design_ps_pl_wrapper
         .a(a),
         .b(b),
         .carry(carry),
-        .sum(sum));
+        .reset_rtl(reset_rtl),
+        .sum(sum),
+        .sys_clock(sys_clock));
 endmodule

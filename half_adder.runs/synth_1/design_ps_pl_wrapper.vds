@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Jan  8 20:12:03 2022
-# Process ID: 611464
+# Start of session at: Tue Apr  5 22:01:10 2022
+# Process ID: 504592
 # Current directory: /home/lorenzogomez/half_adder/half_adder.runs/synth_1
 # Command line: vivado -log design_ps_pl_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_wrapper.tcl
 # Log file: /home/lorenzogomez/half_adder/half_adder.runs/synth_1/design_ps_pl_wrapper.vds
@@ -27,9 +27,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 611486 
+INFO: Helper process launched with PID 504604 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.980 ; gain = 208.184 ; free physical = 962 ; free virtual = 50909
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.578 ; gain = 208.184 ; free physical = 10344 ; free virtual = 58089
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_ps_pl_wrapper' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'design_ps_pl' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:13]
@@ -37,7 +37,7 @@ INFO: [Synth 8-638] synthesizing module 'design_ps_pl_axi_gpio_0_0' [/home/loren
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 8 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 1 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 1 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 1 - type: integer 
@@ -54,7 +54,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/lorenzogomez/half_adde
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 8 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 1 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 1 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 1 - type: integer 
@@ -127,9 +127,9 @@ INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [/home/lorenz
 INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 8 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 1 - type: integer 
-	Parameter C_MAX_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 8 - type: integer 
 	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
@@ -139,6 +139,110 @@ INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/lorenzogomez/half_add
 	Parameter C_FAMILY bound to: zynq - type: string 
 INFO: [Synth 8-226] default block is never used [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:579]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 8 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
@@ -157,7 +261,7 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (5#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (6#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (7#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_axi_gpio_0_0' (8#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/synth/design_ps_pl_axi_gpio_0_0.vhd:85]
@@ -194,6 +298,61 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio__parameterized1' [/home/lorenz
 	Parameter C_IS_DUAL bound to: 1 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core__parameterized0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
+	Parameter C_DW bound to: 32 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 1 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
+	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-226] default block is never used [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:579]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (8#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (8#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (8#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (8#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_axi_gpio_1_0' (9#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_1_0/synth/design_ps_pl_axi_gpio_1_0.vhd:85]
 INFO: [Synth 8-638] synthesizing module 'design_ps_pl_half_adder_0_0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_half_adder_0_0/synth/design_ps_pl_half_adder_0_0.v:56]
@@ -267,13 +426,13 @@ INFO: [Synth 8-256] done synthesizing module 'PS7' (14#1) [/opt/Xilinx/Vivado/20
 INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (15#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
 WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_processing_system7_0_0/synth/design_ps_pl_processing_system7_0_0.v:318]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_processing_system7_0_0' (16#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_processing_system7_0_0/synth/design_ps_pl_processing_system7_0_0.v:59]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_ps_pl_processing_system7_0_0' requires 68 connections, but only 63 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:222]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_processing_system7_0_axi_periph_0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:377]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1WB1S9X' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:934]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1WB1S9X' (17#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:934]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1QFPZ1H' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1066]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1QFPZ1H' (18#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1066]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1TBY2T2' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1198]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_ps_pl_processing_system7_0_0' requires 68 connections, but only 63 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:226]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_processing_system7_0_axi_periph_0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:381]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1WB1S9X' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:938]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1WB1S9X' (17#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:938]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1QFPZ1H' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1070]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1QFPZ1H' (18#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1070]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1TBY2T2' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1202]
 INFO: [Synth 8-638] synthesizing module 'design_ps_pl_auto_pc_0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_auto_pc_0/synth/design_ps_pl_auto_pc_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_9_axi_protocol_converter' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1011,7 +1170,7 @@ INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_9_axi_regi
 INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_9_b2s' (33#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
 INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_9_axi_protocol_converter' (34#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_auto_pc_0' (35#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_auto_pc_0/synth/design_ps_pl_auto_pc_0.v:58]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1TBY2T2' (36#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1198]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1TBY2T2' (36#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:1202]
 INFO: [Synth 8-638] synthesizing module 'design_ps_pl_xbar_0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xbar_0/synth/design_ps_pl_xbar_0.v:59]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_10_axi_crossbar' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1218,8 +1377,8 @@ INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc_
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_10_crossbar_sasd' (44#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_10_axi_crossbar' (45#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_xbar_0' (46#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xbar_0/synth/design_ps_pl_xbar_0.v:59]
-WARNING: [Synth 8-350] instance 'xbar' of module 'design_ps_pl_xbar_0' requires 40 connections, but only 38 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:893]
-INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_processing_system7_0_axi_periph_0' (47#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:377]
+WARNING: [Synth 8-350] instance 'xbar' of module 'design_ps_pl_xbar_0' requires 40 connections, but only 38 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:897]
+INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_processing_system7_0_axi_periph_0' (47#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:381]
 INFO: [Synth 8-638] synthesizing module 'design_ps_pl_rst_processing_system7_0_100M_0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_rst_processing_system7_0_100M_0/synth/design_ps_pl_rst_processing_system7_0_100M_0.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -1250,7 +1409,7 @@ INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Xilinx/Vivado/2016.2/scrip
 INFO: [Synth 8-638] synthesizing module 'SRL16' [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:43294]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-256] done synthesizing module 'SRL16' (48#1) [/opt/Xilinx/Vivado/2016.2/scripts/rt/data/unisim_comp.v:43294]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized3' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -1269,8 +1428,8 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (48#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (48#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized4' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -1289,7 +1448,7 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (48#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized4' (48#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'lpf' (49#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd:125]
@@ -1298,19 +1457,19 @@ INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (50#1) [/home/lorenzogome
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (51#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (52#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:199]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_rst_processing_system7_0_100M_0' (53#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_rst_processing_system7_0_100M_0/synth/design_ps_pl_rst_processing_system7_0_100M_0.vhd:71]
-WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'design_ps_pl_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:367]
+WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'design_ps_pl_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:371]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl' (54#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl.v:13]
 INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_wrapper' (55#1) [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.v:12]
-WARNING: [Synth 8-3331] design cdc_sync__parameterized1 has unconnected port prmry_aclk
-WARNING: [Synth 8-3331] design cdc_sync__parameterized1 has unconnected port prmry_resetn
-WARNING: [Synth 8-3331] design cdc_sync__parameterized1 has unconnected port prmry_vect_in[1]
-WARNING: [Synth 8-3331] design cdc_sync__parameterized1 has unconnected port prmry_vect_in[0]
-WARNING: [Synth 8-3331] design cdc_sync__parameterized1 has unconnected port scndry_resetn
-WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_aclk
-WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_resetn
-WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_vect_in[1]
-WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_vect_in[0]
-WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port scndry_resetn
+WARNING: [Synth 8-3331] design cdc_sync__parameterized4 has unconnected port prmry_aclk
+WARNING: [Synth 8-3331] design cdc_sync__parameterized4 has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design cdc_sync__parameterized4 has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design cdc_sync__parameterized4 has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design cdc_sync__parameterized4 has unconnected port scndry_resetn
+WARNING: [Synth 8-3331] design cdc_sync__parameterized3 has unconnected port prmry_aclk
+WARNING: [Synth 8-3331] design cdc_sync__parameterized3 has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design cdc_sync__parameterized3 has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design cdc_sync__parameterized3 has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design cdc_sync__parameterized3 has unconnected port scndry_resetn
 WARNING: [Synth 8-3331] design generic_baseblocks_v2_1_0_mux_enc__parameterized1 has unconnected port S[0]
 WARNING: [Synth 8-3331] design generic_baseblocks_v2_1_0_mux_enc__parameterized0 has unconnected port S[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_10_decerr_slave has unconnected port S_AXI_AWID[0]
@@ -1403,7 +1562,7 @@ WARNING: [Synth 8-3331] design axi_register_slice_v2_1_9_axic_register_slice__pa
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_9_axic_register_slice__parameterized6 has unconnected port ACLK
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1208.418 ; gain = 340.621 ; free physical = 782 ; free virtual = 50730
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1209.016 ; gain = 341.621 ; free physical = 10204 ; free virtual = 57953
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1413,9 +1572,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1208.418 ; gain = 340.621 ; free physical = 782 ; free virtual = 50730
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1209.016 ; gain = 341.621 ; free physical = 10204 ; free virtual = 57953
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1427,6 +1586,22 @@ Finished Parsing XDC File [/home/lorenzogomez/half_adder/half_adder.srcs/sources
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_processing_system7_0_0/design_ps_pl_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_ps_pl_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_ps_pl_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc] for cell 'design_ps_pl_i/axi_gpio_0/U0'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:3]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:5]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:7]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:9]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:11]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:13]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:15]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc:17]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
 Finished Parsing XDC File [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0_board.xdc] for cell 'design_ps_pl_i/axi_gpio_0/U0'
 Parsing XDC File [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0.xdc] for cell 'design_ps_pl_i/axi_gpio_0/U0'
 Finished Parsing XDC File [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_axi_gpio_0_0/design_ps_pl_axi_gpio_0_0.xdc] for cell 'design_ps_pl_i/axi_gpio_0/U0'
@@ -1451,20 +1626,20 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_ps_pl
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 37 instances were transformed.
-  FDR => FDRE: 36 instances
+  A total of 79 instances were transformed.
+  FDR => FDRE: 78 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1487.102 ; gain = 0.000 ; free physical = 722 ; free virtual = 50670
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1487.348 ; gain = 0.000 ; free physical = 10086 ; free virtual = 57836
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 732 ; free virtual = 50680
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10066 ; free virtual = 57826
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 732 ; free virtual = 50680
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10066 ; free virtual = 57826
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1483,7 +1658,7 @@ Applied set_property DONT_TOUCH = true for design_ps_pl_i/processing_system7_0_a
 Applied set_property DONT_TOUCH = true for design_ps_pl_i/processing_system7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_ps_pl_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 731 ; free virtual = 50679
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10074 ; free virtual = 57832
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -1501,7 +1676,7 @@ INFO: [Synth 8-5544] ROM "p_0_in2" won't be mapped to Block RAM because address 
 INFO: [Synth 8-5544] ROM "p_0_in1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:222]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 725 ; free virtual = 50673
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10078 ; free virtual = 57831
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1529,17 +1704,17 @@ Detailed RTL Component Info :
 	               64 Bit    Registers := 1     
 	               47 Bit    Registers := 2     
 	               36 Bit    Registers := 2     
-	               32 Bit    Registers := 8     
+	               32 Bit    Registers := 7     
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 7     
 	                9 Bit    Registers := 4     
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 4     
 	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 18    
-	                1 Bit    Registers := 103   
+	                1 Bit    Registers := 100   
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     64 Bit        Muxes := 1     
@@ -1549,6 +1724,7 @@ Detailed RTL Component Info :
 	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 4     
 	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 18    
@@ -1605,10 +1781,12 @@ Detailed RTL Component Info :
 Module GPIO_Core 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                1 Bit    Registers := 8     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 6     
 Module axi_gpio 
@@ -1618,6 +1796,15 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+Module GPIO_Core__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 Module axi_gpio__parameterized1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1854,7 +2041,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 725 ; free virtual = 50673
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10078 ; free virtual = 57831
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1864,9 +2051,9 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:318]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/lorenzogomez/half_adder/half_adder.srcs/sources_1/bd/design_ps_pl/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:318]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 772 ; free virtual = 50720
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10078 ; free virtual = 57831
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 772 ; free virtual = 50720
+Finished Parallel Reinference  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10078 ; free virtual = 57831
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1879,7 +2066,21 @@ Start Area Optimization
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_ps_pl_i/axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_ps_pl_i/axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[1] )
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS4/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_reg) is unused and will be removed from module axi_gpio.
@@ -1972,27 +2173,13 @@ INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbi
 INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[56]) is unused and will be removed from module design_ps_pl_xbar_0.
 INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[55]) is unused and will be removed from module design_ps_pl_xbar_0.
 INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[54]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[53]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[52]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[51]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[50]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[49]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[45]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[44]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[43]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[42]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[41]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[40]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[39]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[38]) is unused and will be removed from module design_ps_pl_xbar_0.
-INFO: [Synth 8-3332] Sequential element (inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[37]) is unused and will be removed from module design_ps_pl_xbar_0.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'design_ps_pl_i/rst_processing_system7_0_100M/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_ps_pl_i/rst_processing_system7_0_100M/U0/SEQ/bsr_dec_reg[1]'
 INFO: [Synth 8-3886] merging instance 'design_ps_pl_i/rst_processing_system7_0_100M/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_ps_pl_i/rst_processing_system7_0_100M/U0/SEQ/core_dec_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 758 ; free virtual = 50706
+Finished Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10045 ; free virtual = 57798
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1487.102 ; gain = 619.305 ; free physical = 758 ; free virtual = 50706
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1487.348 ; gain = 619.953 ; free physical = 10045 ; free virtual = 57798
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -2006,10 +2193,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1595.086 ; gain = 727.289 ; free physical = 595 ; free virtual = 50543
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1596.332 ; gain = 728.938 ; free physical = 9856 ; free virtual = 57609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1646.727 ; gain = 778.930 ; free physical = 541 ; free virtual = 50489
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1647.973 ; gain = 780.578 ; free physical = 9790 ; free virtual = 57550
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2021,16 +2208,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 506 ; free virtual = 50454
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9788 ; free virtual = 57547
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 506 ; free virtual = 50454
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9788 ; free virtual = 57547
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 506 ; free virtual = 50454
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9788 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -2064,7 +2251,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2077,7 +2264,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2089,25 +2276,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2146,19 +2333,19 @@ Report Cell Usage:
 |2     |BUFG    |     1|
 |3     |CARRY4  |    18|
 |4     |LUT1    |   160|
-|5     |LUT2    |    49|
-|6     |LUT3    |   253|
-|7     |LUT4    |   129|
-|8     |LUT5    |   112|
-|9     |LUT6    |   189|
+|5     |LUT2    |    51|
+|6     |LUT3    |   259|
+|7     |LUT4    |   130|
+|8     |LUT5    |   117|
+|9     |LUT6    |   195|
 |10    |PS7     |     1|
 |11    |SRL16   |     1|
 |12    |SRL16E  |    22|
 |13    |SRLC32E |    47|
-|14    |FDR     |    24|
-|15    |FDRE    |   766|
-|16    |FDSE    |    59|
-|17    |IBUF    |     2|
+|14    |FDR     |    52|
+|15    |FDRE    |   801|
+|16    |FDSE    |    66|
+|17    |IBUF    |     4|
 |18    |OBUF    |     2|
 +------+--------+------+
 
@@ -2166,24 +2353,24 @@ Report Instance Areas:
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                        |Cells |
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
-|1     |top                                                |                                                              |  1965|
-|2     |  design_ps_pl_i                                   |design_ps_pl                                                  |  1961|
-|3     |    axi_gpio_0                                     |design_ps_pl_axi_gpio_0_0                                     |    78|
-|4     |      U0                                           |axi_gpio                                                      |    78|
-|5     |        AXI_LITE_IPIF_I                            |axi_lite_ipif_5                                               |    54|
-|6     |          I_SLAVE_ATTACHMENT                       |slave_attachment_9                                            |    54|
-|7     |            I_DECODER                              |address_decoder_10                                            |    15|
-|8     |        gpio_core_1                                |GPIO_Core_6                                                   |    21|
-|9     |          \Dual.INPUT_DOUBLE_REGS4                 |cdc_sync_7                                                    |     4|
-|10    |          \Dual.INPUT_DOUBLE_REGS5                 |cdc_sync_8                                                    |     4|
+|1     |top                                                |                                                              |  2057|
+|2     |  design_ps_pl_i                                   |design_ps_pl                                                  |  2051|
+|3     |    axi_gpio_0                                     |design_ps_pl_axi_gpio_0_0                                     |   168|
+|4     |      U0                                           |axi_gpio                                                      |   168|
+|5     |        AXI_LITE_IPIF_I                            |axi_lite_ipif_4                                               |    79|
+|6     |          I_SLAVE_ATTACHMENT                       |slave_attachment_5                                            |    79|
+|7     |            I_DECODER                              |address_decoder_6                                             |    34|
+|8     |        gpio_core_1                                |GPIO_Core                                                     |    79|
+|9     |          \Dual.INPUT_DOUBLE_REGS4                 |cdc_sync                                                      |    32|
+|10    |          \Dual.INPUT_DOUBLE_REGS5                 |cdc_sync__parameterized0                                      |     4|
 |11    |    axi_gpio_1                                     |design_ps_pl_axi_gpio_1_0                                     |    78|
 |12    |      U0                                           |axi_gpio__parameterized1                                      |    78|
 |13    |        AXI_LITE_IPIF_I                            |axi_lite_ipif                                                 |    54|
 |14    |          I_SLAVE_ATTACHMENT                       |slave_attachment                                              |    54|
 |15    |            I_DECODER                              |address_decoder                                               |    15|
-|16    |        gpio_core_1                                |GPIO_Core                                                     |    21|
-|17    |          \Dual.INPUT_DOUBLE_REGS4                 |cdc_sync                                                      |     4|
-|18    |          \Dual.INPUT_DOUBLE_REGS5                 |cdc_sync_4                                                    |     4|
+|16    |        gpio_core_1                                |GPIO_Core__parameterized0                                     |    21|
+|17    |          \Dual.INPUT_DOUBLE_REGS4                 |cdc_sync__parameterized1                                      |     4|
+|18    |          \Dual.INPUT_DOUBLE_REGS5                 |cdc_sync__parameterized2                                      |     4|
 |19    |    half_adder_0                                   |design_ps_pl_half_adder_0_0                                   |     2|
 |20    |    processing_system7_0                           |design_ps_pl_processing_system7_0_0                           |   244|
 |21    |      inst                                         |processing_system7_v5_5_processing_system7                    |   244|
@@ -2224,30 +2411,30 @@ Report Instance Areas:
 |56    |    rst_processing_system7_0_100M                  |design_ps_pl_rst_processing_system7_0_100M_0                  |    66|
 |57    |      U0                                           |proc_sys_reset                                                |    66|
 |58    |        EXT_LPF                                    |lpf                                                           |    23|
-|59    |          \ACTIVE_LOW_AUX.ACT_LO_AUX               |cdc_sync__parameterized1                                      |     6|
-|60    |          \ACTIVE_LOW_EXT.ACT_LO_EXT               |cdc_sync__parameterized0                                      |     6|
+|59    |          \ACTIVE_LOW_AUX.ACT_LO_AUX               |cdc_sync__parameterized4                                      |     6|
+|60    |          \ACTIVE_LOW_EXT.ACT_LO_EXT               |cdc_sync__parameterized3                                      |     6|
 |61    |        SEQ                                        |sequence_psr                                                  |    38|
 |62    |          SEQ_COUNTER                              |upcnt_n                                                       |    13|
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1662.742 ; gain = 794.945 ; free physical = 518 ; free virtual = 50466
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.988 ; gain = 790.594 ; free physical = 9792 ; free virtual = 57547
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 192 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1662.742 ; gain = 377.078 ; free physical = 518 ; free virtual = 50466
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1662.750 ; gain = 794.953 ; free physical = 518 ; free virtual = 50466
+Synthesis finished with 0 errors, 0 critical warnings and 187 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1657.988 ; gain = 373.078 ; free physical = 9792 ; free virtual = 57547
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1657.996 ; gain = 790.602 ; free physical = 9792 ; free virtual = 57547
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 25 instances were transformed.
-  FDR => FDRE: 24 instances
+  A total of 53 instances were transformed.
+  FDR => FDRE: 52 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-364 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+433 Infos, 119 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1694.758 ; gain = 700.359 ; free physical = 519 ; free virtual = 50467
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1726.773 ; gain = 0.000 ; free physical = 517 ; free virtual = 50466
-INFO: [Common 17-206] Exiting Vivado at Sat Jan  8 20:12:48 2022...
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1690.004 ; gain = 696.008 ; free physical = 9795 ; free virtual = 57549
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1722.020 ; gain = 0.000 ; free physical = 9798 ; free virtual = 57552
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  5 22:01:54 2022...

@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Jan  8 20:12:03 2022
-# Process ID: 611464
+# Start of session at: Tue Apr  5 22:01:10 2022
+# Process ID: 504592
 # Current directory: /home/lorenzogomez/half_adder/half_adder.runs/synth_1
 # Command line: vivado -log design_ps_pl_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_wrapper.tcl
 # Log file: /home/lorenzogomez/half_adder/half_adder.runs/synth_1/design_ps_pl_wrapper.vds
